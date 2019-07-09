@@ -5,7 +5,7 @@ pipeline {
       agent { label 'Master' }
       steps {
         sh 'chmod 777 -R ${WORKSPACE}/bulletin-board-app'
-        sh 'sudo docker build -t vikson36/bb-app:${BUILD_NUMBER} ${WORKSPACE}/bulletin-board-app'
+        sh 'sudo docker build -t vikson36/bb-app:latest ${WORKSPACE}/bulletin-board-app'
       }
     }
 	  
