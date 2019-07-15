@@ -1,1 +1,2 @@
-sudo docker ps -a | grep vikson36/bb-app |  awk '{print $1}'  | xargs docker stop
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
