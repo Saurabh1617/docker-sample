@@ -34,7 +34,7 @@ pipeline {
    stage('Docker run') {
       agent { label 'Master' }
       steps {
-        sh 'sudo docker container run --detach --publish 8080:8080 vikson36/bb-app:latest'
+        sh 'sudo docker container run --detach --publish 80:80 vikson36/bb-app:latest'
       }
     }
 	  
